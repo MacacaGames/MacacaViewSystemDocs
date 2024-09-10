@@ -1,7 +1,6 @@
 See [Document](https://macacagames.github.io/MacacaViewSystem/) for more detail.
 
 
-
 # Overview
 **ViewSystem** is a element based UI management system based on Unity GUI. It is developed and used by Macaca Games.
 UI management in Unity3D is always a hard work, the goal of **ViewSystem** is to make UI management more easier and flexable.
@@ -17,7 +16,8 @@ UI management in Unity3D is always a hard work, the goal of **ViewSystem** is to
 ViewElement is the base unit in ViewSystem, any item shows on an UI page can be a ViewElement, such as a button, a icon or anything else.
 
 For example, the red square part in the screenshot is a ViewElement.
-<img src="./Img~/viewelement.png" alt="Screenshot2" height="400"/>
+<img src='./Img~/viewelement.png' alt="Screenshot2" height="400">
+
 
 And the most important thing, ViewElement only focus how it will show or leave and **doesn't** care where it will be placed.
 
@@ -27,7 +27,7 @@ Currently there is 5 method to transition while we try to showing or leaving a V
 
 ViewElementAnimation is a simple tool helps to making a Animation on a ViewElement, it can control the Transfomr(pos, rot, scale) and the CanvasGroup(alpha) with Tween animation.
 
-<img src="./Img~/viewelement_animation.png" height="700"/>
+<img src='./Img~/viewelement_animation.png' height="700">
 
 ## ViewPage
 ViewPage compose with one or more ViewElements and define where the ViewElements should be placed. Base on it's default behaviour there is two kind of ViewPage : FullPage, OverlayPage.
@@ -91,7 +91,7 @@ ViewSystem will create required data and save under Assets/ViewSystemResources f
 
 ## 2. Create ViewController
 In the Scene which you wish to add UI, create a new GameObject and attach ViewControll Component, then drag ViewSystemData to component.
-<img src="./Img~/how_to_1.png" width="600"/>
+<img src="./Img~/how_to_1.png" width="600">
 
 ## 3. Create UGUI Canvas
 Click ``GlobalSetting`` button on toolbar.
@@ -250,7 +250,7 @@ ViewMarginFixer is a helper to solve this issue, which override the anchor stret
 ## IViewElementSingleton
 The component which inherit **IViewElementSingleton** interface will be created as singleton instance, we call it a ViewElementSingleton.
 
-**ViewElementSingleton** instance is managed by the ViewController and will have only one instance during the runtime, use the **ViewController.Instance.GetInjectionInstance<T>()** API to the runtime instance directlly.
+**ViewElementSingleton** instance is managed by the ViewController and will have only one instance during the runtime, use the **ViewController.Instance.GetInjectionInstance\<T\>()** API to the runtime instance directlly.
 
 ```csharp
 public class MyViewElementSingletonSample : MonoBehaviour, IViewElementSingleton
@@ -534,11 +534,11 @@ ViewController.FullPageChanger()
 ## FullPage ChangePage
 > Once the ChangePage API is call in ViewController, the event, callback, lifecycle hack excude order. (Same behaviour while using FullPageChanger)
 
-<img src="./Img~/changepage_lifecycle.jpg" alt="Screenshot2" height="800"/>
+<img src="./Img~/changepage_lifecycle.jpg" alt="Screenshot2" height="800">
 
 # How to...
 ## Get an runtime ViewElement reference in ViewPage/ViewState
-If the target is an Unique ViewElement, you get it's instance via implement IViewElementInjectable on one of its component, then using ViewController.Instance.GetInjectionInstance<SomeInjectableClass>() API to get the instance. 
+If the target is an Unique ViewElement, you get it's instance via implement IViewElementInjectable on one of its component,then using ViewController.Instance.GetInjectionInstance\<SomeInjectableClass>() API to get the instance.
 ```csharp
 // SomeInjectableClass is attach on target ViewElement
 public class SomeInjectableClass : MonoBehaviour, IViewElementInjectable
