@@ -23,18 +23,13 @@ export default defineUserConfig({
                 collapsible: false,
             },
             {
-                text: 'Overview',
-                prefix: 'Overview',
-                link: 'Overview/feature.md',
-                collapsible: false,
-            },
-            {
                 text: 'AllContent',
                 prefix: 'AllContent',
                 link: '/AllContent.md',
                 collapsible: false,
             },
-            
+            "Introduction",
+            "Installation",
         ],
     }),
 
