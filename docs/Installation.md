@@ -30,22 +30,22 @@ git submodule add hhttps://github.com/MacacaGames/MacacaUtility.git Assets/Macac
 ```
 
 ## Setup
-### 1. Editor
-Menu Path : MacacaGames > ViewSystem > Visual Editor
 
-ViewSystem will create required data and save under Assets/ViewSystemResources folder.
-
-### 2. Create ViewController
+### 1. Create ViewController
 In the Scene which you wish to add UI, create a new GameObject and attach ViewControll Component, then drag ViewSystemData to component.
 <img src="./Img~/how_to_1.png" width="600">
 
-### 3. Create UGUI Canvas
-Click ``GlobalSetting`` button on toolbar.
+### 2. Create UGUI Canvas with Editor
+Navigate to Menu Bar : MacacaGames > ViewSystem > Visual Editor
 
+Click ``GlobalSetting`` button on toolbar.
 - Click the ``Generate default UI Root Object`` button to automatically generate your first UI root.
 - Set ViewController gameObject name to ``View Controller GameObject`` field. (As the screenshot is ``UI``)
 - Remember click ``Save`` button on toolbar after all step is done
+
 <img src="./Img~/how_to_2.png" width="600"/>
 
-### 4. Ready to go!
+ViewSystem will create and save data under Assets/ViewSystemResources folder.
+
+### 3. Ready to go!
 Now, all setup step is done, use Example Project to learn how to edit your UI.
