@@ -1,4 +1,4 @@
-# QuickStart
+# GettingStarted
 
 Use the Visual Editor to edit your UI page.
 
@@ -20,6 +20,7 @@ Add the ViewElement to ViewPage Items window
 ### Preview ViewPage
 Turn on Edit Mode in the upper left corner. This will create a temporary scene, allowing users to preview changes in the ViewPage in real-time.
 
+(Turn off or click save button before enter play mode, since Preview ViewPage only work properly under edit mode)
 
 ### Position a ViewElement on ViewPage
 
@@ -61,7 +62,7 @@ Run Unity and check your first page! You can track the currently displayed page 
 
 Make sure to open the ViewSystem Visual Editor before running your game, or it won’t display correctly.
 
-<!-- TODO: 補圖 -->
+<!-- TODO:補圖 -->
 
 
 
