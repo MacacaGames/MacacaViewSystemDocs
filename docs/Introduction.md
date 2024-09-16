@@ -24,20 +24,17 @@ And the most important thing, ViewElement only focus how it will show or leave a
 
 Currently there is 5 method to transition while we try to showing or leaving a ViewElement: **Animator**, **CanvasGroup Fade**, **Active Switch**, **ViewElement Animation**, **Custom**.
 
-### ViewElement Animation
 
-ViewElementAnimation is a simple tool helps to making a Animation on a ViewElement, it can control the Transfomr(pos, rot, scale) and the CanvasGroup(alpha) with Tween animation.
-
-<img src='./Img~/viewelement_animation.png' height="700">
-
-## ViewPage
+### ViewPage
 ViewPage compose with one or more ViewElements and define where the ViewElements should be placed. Base on it's default behaviour there is two kind of ViewPage : FullPage, OverlayPage.
 
-### FullPage
+- FullPage
+
 The basic type of ViewPage, the system only allow one FullPage shows on the screen at the same time.
 When the ChangePage action is fire, system will leave all ViewElements defined in last FullPage and then show the ViewElements defined in next FullPage.
 
-### OverlayPage
+- OverlayPage
+
 Sometimes we may wants an UI page shows and covered current screen, the OverlayPage can helps to implement the feature.
 
 This is very useful when making Dialog, LoadingView ect.
@@ -46,12 +43,12 @@ OverlayPage allow to shows more than one page in the same time, each OverlayPage
 
 > Currently, different OverlayPage can be show in the same time, but the same OverlayPage still has only one instance the duplicate call to shows an OverlayPage which is already on the screen is not allowed and the call will be ignore, but if you wish to replay the show animation in the ViewElement you can set the parameter **ReShowWhileSamePage** to True while calling the ShowOverlayPage API.
 
-## ViewState
+### ViewState
 ViewState is similar as ViewPage, ViewState can define the duplicate part in two or more ViewPage.
 
 Each ViewPage can setup at most one ViewState.
 
 And also the ViewElements define in ViewState will not be update until the ViewState is changed.
 
-## ViewController
+### ViewController
 ViewController is the core component of ViewSystem, all control of the UI is base on this component.

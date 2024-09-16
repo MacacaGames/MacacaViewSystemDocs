@@ -1,5 +1,12 @@
 # Fundamentals 
 
+
+### ViewElement Animation
+
+ViewElementAnimation is a simple tool helps to making a Animation on a ViewElement, it can control the Transfomr(pos, rot, scale) and the CanvasGroup(alpha) with Tween animation.
+
+<img src='./Img~/viewelement_animation.png' height="700">
+
 ## Override property on a ViewElement
 You can override any property on ViewElement, use preview to take effect the override.
 With the override system, you can simply create the ViewElement variant in different ViewPage.

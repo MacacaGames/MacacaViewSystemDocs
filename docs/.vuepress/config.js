@@ -5,31 +5,41 @@ import {viteBundler} from '@vuepress/bundler-vite'
 export default defineUserConfig({
     lang: 'en-US',
 
-    title: 'VuePress',
-    description: 'My first VuePress Site',
+    title: 'View System',
+    description: 'A highly flexible UI solution for Unity',
     
     base: '/MacacaViewSystemDocs/',
 
     theme: defaultTheme({
-        logo: 'https://vuejs.press/images/hero.png',
+        logo: 'LogoV2.png',
 
-        navbar: ['/', '/get-started'],
+        navbar: [ 
+            {
+                text: "Home",
+                link: "/README.md",
+                // icon: "lightbulb",
+                // activeMatch: "^/guide/$",
+            },
+            {
+                text: "Documentation",
+                link: "/Introduction.md",
+                // icon: "lightbulb",
+                // activeMatch: "^/guide/$",
+            }
+        ],
         sidebar: [
             // SidebarItem
-            {
-                text: 'Concept',
-                prefix: 'Concept',
-                link: 'Concept/ViewElement.md',
-                collapsible: false,
-            },
-            {
-                text: 'AllContent',
-                prefix: 'AllContent',
-                link: '/AllContent.md',
-                collapsible: false,
-            },
+            // {
+            //     text: 'AllContent',
+            //     prefix: 'AllContent',
+            //     link: '/AllContent.md',
+            //     collapsible: false,
+            // },
             "Introduction",
             "Installation",
+            "GettingStarted",
+            "Fundamentals",
+            "FAQ",
         ],
     }),
 
