@@ -1,26 +1,79 @@
 # Fundamentals 
 
+### ViewElement Transition
 
-### ViewElement Animation
+- Animator 
 
-ViewElementAnimation is a simple tool helps to making a Animation on a ViewElement, it can control the Transfomr(pos, rot, scale) and the CanvasGroup(alpha) with Tween animation.
+![imatorViewElementTrasition](Img~/AnimatorViewElementTrasition.png)
+
+When showing or leaving, the ViewElement will trigger the nearby Animator to play an animation. The Animator must include animations with the state names: Show State Name, Loop State Name, and Leave State Name.
+
+To quickly create these Animators and Animations, ViewSystem provides an automated generation tool. Go to the toolbar and navigate to
+**MacacaGames > ViewSystem > ViewSystem Edit Helper**.
+
+![ViewSystemEditHelper](Img~/ViewSystemEditHelper.png)
+
+Simply fill in **Aniamtion File Path**, **Element Type**, and  **Animation Name**. Then, click "Create Animation File" to automatically generate the Animator and several animation files in the specified folder. After that, apply the generated content to the Animator component on the ViewElement.
+
+___
+
+- Canvas Group Alpha
+
+![CanvasGroupAlphaViewElementTrasition](Img~/CanvasGroupAlphaViewElementTrasition.png)
+
+When showing or leaving, the ViewElement will adjust the CanvasGroup's alpha with tween.
+
+___
+
+- Active Switch
+
+![ActiveSwitchViewElementTrasition](Img~/ActiveSwitchViewElementTrasition.png)
+
+When showing or leaving, the ViewElement will set GameObject.activeSelf true when shown and false when leaving.
+
+___
+
+- ViewElement Animation
+
+![ViewElementAnimationViewElementTrasition](Img~/ViewElementAnimationViewElementTrasition.png)
 
 <img src='./Img~/viewelement_animation.png' height="700">
 
-## Override property on a ViewElement
+ViewElementAnimation is a simple tool that helps animate a ViewElement. It can control the transform properties (position, rotation, scale) and the CanvasGroup (alpha) using tween animations.
+<!-- TODO:把ViewElementAnimation Editor說明更清楚 -->
+
+___
+
+- Custom
+
+![CustomViewElementTrasition](Img~/CustomViewElementTrasition.png)
+
+When showing or leaving, the ViewElement will trigger the corresponding Unity Event.
+
+## Override 
+
+### Override property on a ViewElement
 You can override any property on ViewElement, use preview to take effect the override.
 With the override system, you can simply create the ViewElement variant in different ViewPage.
 <img src="./Img~/override_demo.gif" />
 
-### Why using ViewSystem's override but not Unity Prefab variant?
-ViewSystem override is a runtime function, it means all modify only exsit during the Game is runing, use the ViewSystem override helps you to avoid to make a lot of Prefab variant assets.
+- Runtime Flexibility:
 
-The limitation is that the ViewSystem override cannot add or remove components, GameObjects, etc. In this case, use Unity Prefab variants instead.
 
-## Override UnityEvent on a ViewElement
+The ViewSystem override is a runtime function, meaning that all changes exist only while the game is running. This allows you to **avoid creating multiple prefab variant assets**, saving time and reducing asset clutter.
+
+- Limitation:
+
+The main limitation of the ViewSystem override is that **it cannot add or remove components or GameObjects**. In cases where you need to add or remove these elements, it’s better to use Unity’s prefab variants.
+
+
+### Override UnityEvent on a ViewElement
 The override system also support to bind UnityEvent on an UGUI selectable.
 
-Make a method with Component parameter and attact ``ViewSystemEvent`` attribute on it, the method will show on up the override window.
+
+Declare a method with a Component parameter and add the `ViewSystemEvent` attribute, and you’ll be able to find the method in the dropdown menu in the override window.
+
+
 <img src="./Img~/event_demo.gif" />
 
 Example: (In UIManager.cs)
@@ -32,11 +85,19 @@ public void MyEvent(Component selectable)
 }
 ```
 
-## Override Property or Button.onClick on a ViewElement via script in a ViewElementBehaviour
-You can override a property via Attribute in a script, take this example, this means override the `sprite` property on `UnityEngine.UI.Image` component on a child GameObject which name is `Frame` by the value of `someSprite` variable.
+
+ViewSystem will search for any components in the current scene that implement the method. If found, it will create a temporary delegate. If none are found, a new object will be generated in the scene, and the component will be assigned to it.
+
+This approach is suitable for placing a singleton object in the scene in advance, ensuring that the ViewSystem can find the component and will only find one.
+
+## Override Property via script
+
+- Attribute
+
+You can override a property via `OverrideProperty` or `OverrideButtonEvent` Attribute in a script, take this example, this means override the `sprite` property on `UnityEngine.UI.Image` component on a child GameObject which name is "Frame" by the value of "someSprite" variable.
 
 ```csharp
-// Is require a child class of ViewElementBehaviour
+// require a child class of ViewElementBehaviour
 public class MyUILogic : ViewElementBehaviour{
     [OverrideProperty("Frame", typeof(UnityEngine.UI.Image), nameof(UnityEngine.UI.Image.sprite)) ]
     [SerializeField]
@@ -49,32 +110,35 @@ public class MyUILogic : ViewElementBehaviour{
     }
 }
 ```
+Please note that in methods with `OverrideButtonEvent`, you cannot access other references within the same class. If you want to obtain them, you must use other methods, such as the various reference acquisition methods provided by ViewSystem (see [Get an runtime ViewElement reference in ViewPage/ViewState](#get-an-runtime-viewelement-reference-in-viewpage-viewstate)) or implement them yourself.
 
-## Override Property via script with Unity Inspector
-The ViewElementOverride can let you setting the ViewElement override on any MonoBehaviour by using Unity's Inspector
+___
+
+- ViewElementOverride
+
+ViewElementOverride allows you to set the ViewElement override on any MonoBehaviour in the Inspector
 
 
 See the example: 
 ```csharp
-
 public class MyScript: MonoBehaviour{
-    [SerializeField]
-    ViewElementOverride viewElementOverride;
 
-    void ApplyOverride()
-    {
-        GetComponent<ViewElement>().ApplyOverrides(viewElementOverride);
-    }
+    [SerializeField]
+    ViewElementOverride myOverride;
 }
 ```
 
-By adding a ViewElementOverride Object field in your script, you will see the Override Editor in your Inspector, just use in like using the Overide Window in ViewSystem Editor.
+By adding a `ViewElementOverride` object field in your script, you'll see the Override Editor in your Inspector. You can use it just like the Override Window in the ViewSystem Editor.
+
 <img src="./Img~/viewelementoverride.png" />
 
 
-Then use the ViewElement.ApplyOverrides() API to apply the override.
+Then use following code to apply the override.
 ```csharp
-GetComponent<ViewElement>().ApplyOverrides(viewElementOverride);
+void ApplyOverride()
+{
+    GetComponent<ViewElement>().ApplyOverrides(myOverride);
+}
 ```
 
 ## Safe Area

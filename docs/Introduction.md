@@ -2,7 +2,6 @@ See [Document](https://macacagames.github.io/MacacaViewSystem/) for more detail.
 
 
 # Introduction
-## Overview
 **ViewSystem** is a element based UI management system based on Unity GUI. It is developed and used by Macaca Games.
 UI management in Unity3D is always a hard work, the goal of **ViewSystem** is to make UI management more easier and flexable.
 
@@ -22,7 +21,7 @@ For example, the red square part in the screenshot is a ViewElement.<br>
 
 And the most important thing, ViewElement only focus how it will show or leave and **doesn't** care where it will be placed.
 
-Currently there is 5 method to transition while we try to showing or leaving a ViewElement: **Animator**, **CanvasGroup Fade**, **Active Switch**, **ViewElement Animation**, **Custom**.
+Currently, there are 5 methods to show or leave a ViewElement: `Animator`, `Canvas Group Alpha`, `Active Switch`, `ViewElement Animation`, `Custom`. For more details, check [ViewElement Transition](/docs/Fundamentals.md#viewelement-trasition).
 
 
 ### ViewPage
@@ -36,7 +35,6 @@ When the ChangePage action is fire, system will leave all ViewElements defined i
 - OverlayPage
 
 Sometimes we may wants an UI page shows and covered current screen, the OverlayPage can helps to implement the feature.
-
 This is very useful when making Dialog, LoadingView ect.
 
 OverlayPage allow to shows more than one page in the same time, each OverlayPage maintain it's own lifecycle.
