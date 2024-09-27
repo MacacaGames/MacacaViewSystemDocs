@@ -28,17 +28,14 @@ export default defineUserConfig({
             }
         ],
         sidebar: [
-            // SidebarItem
-            // {
-            //     text: 'AllContent',
-            //     prefix: 'AllContent',
-            //     link: '/AllContent.md',
-            //     collapsible: false,
-            // },
             "Introduction",
             "Installation",
             "GettingStarted",
             "Fundamentals",
+            "ViewElementTransition",
+            "VisualEditor",
+            "LifeCycle Hook and Injection",
+            "HelpTools",
             "FAQ",
         ],
     }),

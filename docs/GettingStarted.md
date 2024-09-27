@@ -1,24 +1,38 @@
 # GettingStarted
 
-Use the Visual Editor to edit your UI page.
+Here are the steps required to get the ViewSystem up and running:
 
-Go to Menu Bar,  MacacaGames > ViewSystem > Visual Editor
+### Create ViewController
+In the Scene which you wish to add UI, create a new GameObject and attach ViewControll Component, then drag ViewSystemData to component.
+
+<img src="./Img~/how_to_1.png" width="600">
+
+### Create UGUI Canvas with Editor
+Navigate to Menu Bar : MacacaGames > ViewSystem > Visual Editor
+
+Click ``GlobalSetting`` button on toolbar.
+- Click the ``Generate default UI Root Object`` button to automatically generate your first UI root. All ViewPages and ViewElements generated at runtime will be placed under this object.
+- Remember click ``Save`` button on toolbar after all step is done
+
+<img src="./Img~/how_to_2.png" width="600"/>
+
+ViewSystem will create and save data under Assets/ViewSystemResources folder.
 
 ### Make a ViewElement
-Create an UI object. Attach ViewElement component to it. 
+Create a UI object (`Image`, `Button`, `Dropdown`, etc.) and attach the `ViewElement` component to it.
 
 Make it into a prefab so we can use it later.
 
 ### Make a ViewPage
 Right click on empty space > Add FullPage
 
-Add the ViewElement to ViewPage Items window 
-<br>
+Add the `ViewElement` you just created to `ViewPageItems`. 
 
 ![add_viewelement](./Img~/add_viewelement.gif)
 
+
 ### Preview ViewPage
-Turn on Edit Mode in the upper left corner. This will create a temporary scene, allowing users to preview changes in the ViewPage in real-time.
+Turn on `Edit Mode` in the upper left corner. This will create a temporary scene, allowing users to preview changes in the ViewPage in real-time.
 
 (Turn off or click save button before enter play mode, since Preview ViewPage only work properly under edit mode)
 
@@ -39,8 +53,7 @@ This mode is deprecated, we only recommend using this mode in special situation 
 
 ### Show page
 
-Add following script to your project, and attach it to a GameObject.
-It 
+Add following script to your project, and attach it to a GameObject in the scene.
 
 ```csharp
 public class GameStart : MonoBehaviour
@@ -48,7 +61,7 @@ public class GameStart : MonoBehaviour
     // show a viewPage on Awake
     void Awake()
     {
-        //replace this with your ViewPage name
+        //replace this with your ViewPage name 
         string yourPageName = "TestPage";
         ViewController
             .FullPageChanger()
@@ -58,9 +71,9 @@ public class GameStart : MonoBehaviour
 }
 ```
 ### Run and Test
-Run Unity and check your first page! You can track the currently displayed page in the ViewSystem Visual Editor. 
+Run Unity and check your first page. You can track the currently displayed page in the ViewSystem Visual Editor. 
 
-Make sure to open the ViewSystem Visual Editor before running your game, or it won’t display correctly.
+>Make sure to open the ViewSystem Visual Editor **before** running your game, or it won’t display correctly.
 
 <!-- TODO:補圖 -->
 

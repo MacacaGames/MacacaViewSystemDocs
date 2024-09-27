@@ -12,3 +12,6 @@ Mind that ViewSystem control ViewElement's lifecycle. You don't want to call Gam
 
 ### I got a Untitled scene in my Hierarchy
 Delete it directly.
+
+### Why XX dosen't work?
+Check is there `ViewElement` component attached on your gameobject. 
