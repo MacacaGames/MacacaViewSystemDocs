@@ -273,7 +273,7 @@ public class MyUILogic : ViewElementBehaviour
 }
 ```
 
-### UUsingse Model Inject with Override Window
+### Using Model Inject with Override Window
 The ViewSystem Editor offers a convenient way for developers to set override values.
 
 See [Override property on a ViewElement](#override-property-on-a-viewelement) to learn how to use it.
@@ -317,7 +317,5 @@ ViewController.FullPageChanger()
 ```
 
 <img src="./Img~/overridewindow_model.png" />
-
-> To Set the model inject syntax string on a non string field e.g. Color, you can click the **Eye** Icon on the left of the item to switch the editor display method
 
 > To set the model inject syntax string on a non-string field, such as `Color`, you can click the **Eye icon** on the left of the item to toggle the editor display mode.
