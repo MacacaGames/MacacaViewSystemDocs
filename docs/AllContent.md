@@ -296,7 +296,7 @@ Use the ViewController.Instance.RefreshAll(); to refresh all ViewElement on the 
 
 ### ViewElementInject (Model Inject)
 
-With ViewElementBehaviour Componment, we can use a powerful feature that help us to sending the data to a Runtime ViewElement we call it **Model Inject**.
+With `ViewElementBehaviour` Componment, we can use a powerful feature that help us to sending the data to a Runtime ViewElement we call it **Model Inject**.
 
 See follow example:
 ```csharp

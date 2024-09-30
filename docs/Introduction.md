@@ -1,6 +1,3 @@
-See [Document](https://macacagames.github.io/MacacaViewSystem/) for more detail.
-
-
 # Introduction
 **ViewSystem** is a element based UI management system based on Unity GUI. It is developed and used by Macaca Games.
 UI management in Unity3D is always a hard work, the goal of **ViewSystem** is to make UI management more easier and flexable.

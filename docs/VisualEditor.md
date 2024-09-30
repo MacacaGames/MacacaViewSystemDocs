@@ -1,6 +1,6 @@
 # Visual Editor
 
-## ViewPage Data Storage
+### ViewPage Data Storage
 Each ViewPage and ViewState will be stored as a ScriptableObject in the ViewSystemResources, containing the necessary information to correctly display the ViewPage.
 
 ## Editor Tool Bar

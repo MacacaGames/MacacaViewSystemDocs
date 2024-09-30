@@ -30,7 +30,6 @@ Add the `ViewElement` you just created to `ViewPageItems`.
 
 ![add_viewelement](./Img~/add_viewelement.gif)
 
-
 ### Preview ViewPage
 Turn on `Edit Mode` in the upper left corner. This will create a temporary scene, allowing users to preview changes in the ViewPage in real-time.
 

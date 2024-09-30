@@ -23,18 +23,21 @@ actions:
 #   - title: Plugins
 #     details: Flexible plugin API, allowing plugins to provide lots of plug-and-play features for your site.
 #   - title: Bundlers
-#     details: Default bundler is Vite, while Webpack is also supported. Choose the one you like!
+#     details: Default bundler is Vite, while Webpack is also supported. Choose the one you like! 
 
 
 
 footer: MIT Licensed | Copyright © 2018-present VuePress Community
 ---
 
+
 ## Use case
-![CharacterUpgrade](/characterUpgrade.gif)
+<img src="./Img~/characterUpgrade.gif"  width="300">
+<img src="./Img~/characterMerge.gif"  width="300">
+<img src="./Img~/news.gif"  width="300">
 
-<p style="text-align:center;">These products were made with ViewSystem.</p>
-
+<!-- <p style="text-align:center;">These products were made with ViewSystem.</p> -->
+## Made with ViewSystem
 
 <table align="cneter">
   <thead>
@@ -102,3 +105,6 @@ footer: MIT Licensed | Copyright © 2018-present VuePress Community
     </tr>
   </tbody>
 </table>
+
+ source: [https://github.com/MacacaGames/MacacaViewSystem](https://github.com/MacacaGames/MacacaViewSystem)
+

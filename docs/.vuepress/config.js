@@ -36,7 +36,7 @@ export default defineUserConfig({
             "VisualEditor",
             "LifeCycle Hook and Injection",
             "HelpTools",
-            "FAQ",
+            "TroubleShooting",
         ],
     }),
 
