@@ -30,14 +30,16 @@ actions:
 footer: MIT Licensed | Copyright © 2018-present VuePress Community
 ---
 
-
-## Use case
-<img src="./Img~/characterUpgrade.gif"  width="300">
-<img src="./Img~/characterMerge.gif"  width="300">
-<img src="./Img~/news.gif"  width="300">
+<img src="./Img~/skySurfing.gif">
+<img src="./Img~/skyBandit.gif">
+<img src="./Img~/rythemGo.gif">
+<img src="./Img~/MergeAndShoot.gif">
+<img src="./Img~/characterUpgrade.gif">
+<img src="./Img~/AG.gif">
+<img src="./Img~/ProjectCube.gif">
 
 <!-- <p style="text-align:center;">These products were made with ViewSystem.</p> -->
-## Made with ViewSystem
+### Made with ViewSystem
 
 <table align="cneter">
   <thead>
@@ -45,9 +47,9 @@ footer: MIT Licensed | Copyright © 2018-present VuePress Community
   <tbody>
     <tr>
         <td>
-            <a href="https://itunes.apple.com/app/id1560796657">
-                <img src="https://play-lh.googleusercontent.com/gE3o9Fy930eSUgrCZ4vA4NyfNl1VXS4U6JQVl3v4tsJKyxS8b7j3_0HvNQLs3Tvkq57g=w240-h480-rw" alt="Screenshot2" width="320"/> 
-                <p style="text-align:center;">Rhythm GO</p>
+            <a href="https://apps.apple.com/app/id1315384852">
+                <img src="https://play-lh.googleusercontent.com/L7RwZ823l0BbIhodHwHVz8Y-nEaYWumib7FdZP9n6JlncYMR0z5ZdR6Ha3XNFRYwt1k=w240-h480" alt="Screenshot2" width="320"/> 
+                <p style="text-align:center;">Sky Surfing</p>
             </a>
         </td>
         <td>
@@ -57,9 +59,9 @@ footer: MIT Licensed | Copyright © 2018-present VuePress Community
             </a>
         </td>
         <td>
-            <a href="https://apps.apple.com/app/id1315384852">
-                <img src="https://play-lh.googleusercontent.com/L7RwZ823l0BbIhodHwHVz8Y-nEaYWumib7FdZP9n6JlncYMR0z5ZdR6Ha3XNFRYwt1k=w240-h480" alt="Screenshot2" width="320"/> 
-                <p style="text-align:center;">Sky Surfing</p>
+            <a href="https://itunes.apple.com/app/id1560796657">
+                <img src="https://play-lh.googleusercontent.com/gE3o9Fy930eSUgrCZ4vA4NyfNl1VXS4U6JQVl3v4tsJKyxS8b7j3_0HvNQLs3Tvkq57g=w240-h480-rw" alt="Screenshot2" width="320"/> 
+                <p style="text-align:center;">Rhythm GO</p>
             </a>
         </td>
     </tr>
