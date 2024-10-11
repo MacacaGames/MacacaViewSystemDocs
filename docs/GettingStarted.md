@@ -38,16 +38,11 @@ Turn on `Edit Mode` in the upper left corner. This will create a temporary scene
 ### Position a ViewElement on ViewPage
 
 There are 2 different ways to define the RectTransform of a ViewElement on a ViewPage: RectTransform or CustomParent.
-- RectTransform
 
-Define RectTransform of a ViewElement just like modifing the RectTransform Component in Inspector window.
-When you're previewing a ViewPage, all modify on the RectTransform information will automatically update to the previewing Screen.
-
-- Custom Parent (deprecated)
-
-In Custom Parent mode the system will find the Transform object which you define and set to that Object's child.
-
-This mode is deprecated, we only recommend using this mode in special situation such as you would like to put a ViewElement as another ViewElement's child in the runtime.
+| Feature        | Description                                                                                                                                     |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| RectTransform  | Define the RectTransform of a ViewElement just like modifying the RectTransform component in the Inspector window. <br> When previewing a ViewPage, any changes to the RectTransform will automatically update on the previewing screen. |
+| Custom Parent (deprecated) | In Custom Parent mode, the system finds the Transform object that you define and sets the ViewElement as a child of that object. <br> This mode is deprecated, we only recommend using this mode in special situation such as you would like to put a ViewElement as another ViewElement's child in the runtime.|
 
 
 ### Show page
@@ -74,7 +69,7 @@ Run Unity and check your first page. You can track the currently displayed page 
 
 >Make sure to open the ViewSystem Visual Editor **before** running your game, or it won’t display correctly.
 
-<!-- TODO:補圖 -->
+### Example project
 
-
+If you want to check out the sample Unity project, you can refer to the [ViewSystem Example](https://github.com/MacacaGames/ViewSystemExample). It includes feature demonstrations and practical examples.
 
