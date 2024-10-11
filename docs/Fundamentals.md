@@ -81,6 +81,38 @@ public void MyEvent(Component selectable)
 ```
 
 
+You can also fill in the groupName parameter in the ViewSystemEvent. This way, the events will be grouped together under the same name in the Event Method dropdown window.
+
+![eventGroup](./Img~/eventGroup.png)
+
+```csharp
+[ViewSystemEvent]
+    public void OnExitGameButtonClick(Component c)
+    {
+    }
+    [ViewSystemEvent]
+    public void OnGameResultClick(Component c)
+    {
+    }
+    [ViewSystemEvent]
+    public void OnGameWinBtnClick(Component c)
+    {
+    }
+    [ViewSystemEvent]
+    public void OnGameLoseBtnClick(Component c)
+    {
+    }
+
+    [MacacaGames.ViewSystem.ViewSystemEvent("MyGroupName")]
+    public void MyEvent1(Component selectable)
+    {
+    }
+    [MacacaGames.ViewSystem.ViewSystemEvent("MyGroupName")]
+    public void MyEvent2(Component selectable)
+    {
+    }
+```
+
 ViewSystem will search for any components in the current scene that implement the method. If found, it will create a temporary delegate. If none are found, a new object will be generated in the scene, and the component will be assigned to it.
 
 This approach is suitable for placing a singleton object in the scene in advance, ensuring that the ViewSystem can find the component and will only find one.
