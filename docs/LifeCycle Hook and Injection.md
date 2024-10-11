@@ -3,7 +3,7 @@
 ### IViewElementSingleton
 Components that inherit the `IViewElementSingleton` interface will be created as singleton instances, referred to as **ViewElementSingleton**.
 
-A **ViewElementSingleton** is managed by the ViewController and will only have one instance during runtime. Use the `ViewController.Instance.GetInjectionInstance<T>()` API to directly access the runtime instance.
+A **ViewElementSingleton** is managed by the ViewController and will only have one instance during runtime. Use the `ViewController.Instance.GetSingletonViewElement<T>()` API to directly access the runtime instance.
 
 To create and use a ViewElementSingleton:
 
@@ -11,7 +11,7 @@ To create and use a ViewElementSingleton:
 2. Attach a script that inherits from the `IViewElementSingleton` interface to the ViewElement object.
 3. Check the "isUnique" box on the ViewElement component.
 4. Put it into any ViewState or ViewPage
-5. call `ViewController.Instance.GetInjectionInstance<T>()` at runtime.
+5. call `ViewController.Instance.GetSingletonViewElement<T>()` at runtime.
 
 ```csharp
 //inherits IViewElementSingleton
@@ -21,8 +21,8 @@ public class MyViewElementSingleton : ViewElementBehaviour, IViewElementSingleto
 ```
 
 ```csharp
-// Use GetInjectionInstance method to get the singleton instance of ViewElement.
-MyViewElementSingleton someInjectableClass = ViewController.Instance.GetInjectionInstance<MyViewElementSingleton>();
+// Use GetSingletonViewElement method to get the singleton instance of ViewElement.
+MyViewElementSingleton someInjectableClass = ViewController.Instance.GetSingletonViewElement<MyViewElementSingleton>();
 ```
 
 ### IViewElementLifeCycle

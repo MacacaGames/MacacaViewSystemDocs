@@ -18,7 +18,7 @@ For example, the red square part in the screenshot is a ViewElement.<br>
 
 And the most important thing, ViewElement only focus how it will show or leave and **doesn't** care where it will be placed.
 
-Currently, there are 5 methods to show or leave a ViewElement: `Animator`, `Canvas Group Alpha`, `Active Switch`, `ViewElement Animation`, `Custom`. For more details, check [ViewElement Transition](/docs/Fundamentals.md#viewelement-trasition).
+Currently, there are 5 methods to show or leave a ViewElement: `Animator`, `Canvas Group Alpha`, `Active Switch`, `ViewElement Animation`, `Custom`. For more details, check [ViewElement Transition](Fundamentals.md#viewelement-trasition).
 
 
 ### ViewPage

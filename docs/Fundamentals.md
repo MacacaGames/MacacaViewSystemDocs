@@ -137,7 +137,7 @@ public class MyUILogic : ViewElementBehaviour{
     }
 }
 ```
-Please note that in methods with `OverrideButtonEvent`, you cannot access other references within the same class. If you want to obtain them, you must use other methods, such as the various reference acquisition methods provided by ViewSystem (see [Get an runtime ViewElement reference in ViewPage/ViewState](#get-an-runtime-viewelement-reference-in-viewpage-viewstate)) or implement them yourself.
+Please note that in methods with `OverrideButtonEvent`, you cannot access other references within the same class. If you want to obtain them, you must use other methods, such as the various reference acquisition methods provided by ViewSystem or implement them yourself.
 
 ___
 
@@ -169,13 +169,13 @@ void ApplyOverride()
 ```
 
 ## Get a runtime ViewElement reference in ViewPage/ViewState
-If the target is an **Unique** ViewElement (with `Is Unique` set to true on the ViewElement), you get it's instance via implement IViewElementInjectable on one of its component,then using ViewController.Instance.GetInjectionInstance\<SomeInjectableClass>() API to get the instance.
+If the target is an **Unique** ViewElement (with `Is Unique` set to true on the ViewElement), you get it's instance via implement IViewElementInjectable on one of its component,then using `ViewController.Instance.GetSingletonViewElement<SomeInjectableClass>()` API to get the instance.
 ```csharp
 // SomeInjectableClass is attach on target ViewElement
 public class SomeInjectableClass : MonoBehaviour, IViewElementInjectable
 {}
 
-SomeInjectableClass someInjectableClass = ViewController.Instance.GetInjectionInstance<SomeInjectableClass>();
+SomeInjectableClass someInjectableClass = ViewController.Instance.GetSingletonViewElement<SomeInjectableClass>();
 ```
 
 Otherwise, use the `GetViewPageElementByName()` or `GetViewStateElementByName()` API to get the runtime instance from the target ViewPage/ViewState.
