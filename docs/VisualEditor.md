@@ -12,8 +12,6 @@ Turn on to preview ViewPage in edit time. This will create a temporary scene, al
 Save all changes and exit Edit Mode.
 ### Reload 
 Reset View System Visual Editor. Useful when something went wrong in editor.
-<!-- TODO:搞清楚Reload還有沒有正常運作，還有如何說明 -->
-<!-- ClearEditor dataReader.Init( dataReader.EditEnd(); CanEnterEditMode = true; -->
 ### Clear Preview
 Cancel the preview of the current ViewPage 
 ### Normalized

@@ -7,9 +7,9 @@ actions:
     link: /Introduction.md
     type: primary
 
-  # - text: Introduction
-  #   link: https://vuejs.press/guide/introduction.html
-  #   type: secondary
+  - text: Source
+    link: https://github.com/MacacaGames/MacacaViewSystem
+    type: secondary
 
 # features:
 #   - title: Simplicity First
@@ -27,7 +27,7 @@ actions:
 
 
 
-footer: MIT Licensed | Copyright © 2018-present VuePress Community
+# footer: MIT Licensed | Copyright © 2018-present VuePress Community
 ---
 
 <img src="./Img~/skySurfing.gif">
@@ -111,4 +111,6 @@ footer: MIT Licensed | Copyright © 2018-present VuePress Community
  source: [https://github.com/MacacaGames/MacacaViewSystem](https://github.com/MacacaGames/MacacaViewSystem)
  
  example project: [https://github.com/MacacaGames/ViewSystemExample](https://github.com/MacacaGames/ViewSystemExample)
+
+ Script API : [https://macacagames.github.io/MacacaViewSystem/api/MacacaGames.ViewSystem.html](https://macacagames.github.io/MacacaViewSystem/api/MacacaGames.ViewSystem.html) 
 
